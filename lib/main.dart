@@ -1,13 +1,18 @@
 import 'package:english_words/english_words.dart' as prefix0;
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'package:flutter_practice/SecondScreen.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Startup Name Generator', home: RandomWords());
+    return MaterialApp(
+      title: 'First Screen',
+      home: RandomWords(),
+      theme: new ThemeData(primaryColor: Colors.white),
+    );
   }
 }
 
@@ -15,10 +20,12 @@ class RandomWordsState extends State<RandomWords> {
   final _suggestions = <WordPair>[];
   final _biggerFont = const TextStyle(fontSize: 18.0);
   final _saved = new Set<WordPair>(); //store user's favourite
+  var mBuildContext;
 
   @override
   Widget build(BuildContext context) {
     final wordPair = WordPair.random();
+    mBuildContext = context;
     return Scaffold(
       appBar: AppBar(
         title: Text('startup name generator'),
@@ -57,7 +64,11 @@ class RandomWordsState extends State<RandomWords> {
           } else {
             _saved.add(pair);
           }
-        })
+        }),
+        Navigator.push(
+            mBuildContext,
+            new MaterialPageRoute(
+                builder: (mBuildContext) => new SecondScreen()))
       },
     );
   }
