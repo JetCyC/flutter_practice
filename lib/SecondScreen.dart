@@ -37,7 +37,7 @@ class SecondScreen extends StatelessWidget {
     );
 
     //一个图标加图标下面的文字
-    Column buildButtonColumn(IconData icon, String label) {
+    Column getBuildButtonColumn(IconData icon, String label) {
       Color color = Colors.blue;
       return new Column(
         mainAxisSize: MainAxisSize.min,
@@ -63,9 +63,9 @@ class SecondScreen extends StatelessWidget {
       child: new Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          buildButtonColumn(Icons.call, 'CALL'),
-          buildButtonColumn(Icons.near_me, "ROUTE"),
-          buildButtonColumn(Icons.share, 'SHARE'),
+          getBuildButtonColumn(Icons.call, 'CALL'),
+          getBuildButtonColumn(Icons.near_me, "ROUTE"),
+          getBuildButtonColumn(Icons.share, 'SHARE'),
         ],
       ),
     );
