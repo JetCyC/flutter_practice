@@ -1,7 +1,13 @@
 import 'package:english_words/english_words.dart' as prefix0;
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'package:flutter_practice/CardDemo.dart';
+import 'package:flutter_practice/FifthScreen.dart';
+import 'package:flutter_practice/FourthScreen.dart';
+import 'package:flutter_practice/ListViewDemo.dart';
 import 'package:flutter_practice/SecondScreen.dart';
+import 'package:flutter_practice/StackDemo.dart';
+import 'package:flutter_practice/ThirdScreen.dart';
 
 void main() => runApp(MyApp());
 
@@ -68,7 +74,7 @@ class RandomWordsState extends State<RandomWords> {
         Navigator.push(
             mBuildContext,
             new MaterialPageRoute(
-                builder: (mBuildContext) => new SecondScreen()))
+                builder: (mBuildContext) => new CardDemo()))
       },
     );
   }
