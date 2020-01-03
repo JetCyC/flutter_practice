@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_practice/view/FavoriteWidget.dart';
 
 class SecondScreen extends StatelessWidget {
   @override
@@ -27,11 +28,7 @@ class SecondScreen extends StatelessWidget {
                   ),
                 ],
               )),
-          new Icon(
-            Icons.star,
-            color: Colors.red[500],
-          ),
-          new Text('41')
+          new FavoriteWidget()
         ],
       ),
     );

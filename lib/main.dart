@@ -8,6 +8,9 @@ import 'package:flutter_practice/ListViewDemo.dart';
 import 'package:flutter_practice/SecondScreen.dart';
 import 'package:flutter_practice/StackDemo.dart';
 import 'package:flutter_practice/ThirdScreen.dart';
+import 'package:flutter_practice/view/ParentWidget.dart';
+import 'package:flutter_practice/view/ParentWidgetC.dart';
+import 'package:flutter_practice/view/TapboxA.dart';
 
 void main() => runApp(MyApp());
 
@@ -74,7 +77,7 @@ class RandomWordsState extends State<RandomWords> {
         Navigator.push(
             mBuildContext,
             new MaterialPageRoute(
-                builder: (mBuildContext) => new CardDemo()))
+                builder: (mBuildContext) => new ParentWidgetC()))
       },
     );
   }
